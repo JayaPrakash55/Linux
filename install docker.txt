@@ -1,0 +1,21 @@
+Update your existing list of packages
+* sudo apt update
+
+Install few prerequisite packages 
+* sudo apt install apt-transport-https ca-certificates curl software-properties-common
+
+Add GPG key for official docker repository to system
+* curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+Add docker repository to APT sources
+* sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+
+Install from docker repo instead of default ubuntu repo
+* apt-cache policy docker-ce
+
+Now install docker
+* sudo apt install docker-ce
+
+Check the status of docker
+* systemctl status docker
+
